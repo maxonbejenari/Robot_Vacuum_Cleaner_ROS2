@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!-- Generated using onshape-to-robot -->
+<!-- Onshape document_id: 6ec665232e6fc828980877e8 -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- Link camera -->
+  <link name="camera_link">
+    <inertial>
+      <origin xyz="-0 0 -0.00025" rpy="0 0 0"/>
+      <mass value="2.63e-05"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part camera -->
+    <visual>
+      <origin xyz="0 0 -0.0003" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.00025 0.01 0.004" />
+      </geometry>
+      <material name="camera_link_material">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.0005" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.005 0.002" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Joint from base_link to camera -->
+  <joint name="camera_joint" type="fixed">
+    <origin xyz="0.159958 -0 0.0275" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="camera_link"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" velocity="100"/>
+  </joint>
+
+  <!--THIS IS A FIX TO CHANGE THE ORIENTATION SO IT WORKS WITH OPENCV (ALWAYS INCLUDE)
+  generate an optical frame 
+  http://www.ros.org/reps/rep-0103.html#suffix-frames
+  so that ros and opencv can operate on the camera frame correctly -->
+  <link name="camera_optical_link">
+  </link>
+
+  <joint name="camera_optical_joint" type="fixed">
+      <!-- these values have to be these values otherwise the gazebo camera
+          image won't be aligned properly with the frame it is supposedly
+          originating from -->
+      <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
+      <parent link="camera_link"/>
+      <child link="camera_optical_link"/>
+  </joint>
+
+</robot>

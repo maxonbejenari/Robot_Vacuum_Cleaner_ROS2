@@ -1,0 +1,210 @@
+<?xml version="1.0" ?>
+<!-- Generated using onshape-to-robot -->
+<!-- Onshape document_id: 6ec665232e6fc828980877e8 -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<!-- Link base footprint-->
+    <link name="base_footprint" />
+    <!-- Joint base footprint -->
+    <joint name="base_joint" type="fixed">
+        <parent link="base_footprint"/>
+        <child link="base_link"/>
+        <origin xyz="0.0 0.0 0.0194" rpy="0.0 0.0 0.0"/>
+    </joint>
+    
+<!-- Link base_link -->
+  <link name="base_link">
+    <inertial>
+      <origin xyz="-0.00746509 0 0.0155039" rpy="0 0 0"/>
+      <mass value="1.93363"/>
+      <inertia ixx="0.0146674" ixy="-0" ixz="0.000285193" iyy="0.0151949" iyz="-0" izz="0.029234"/>
+    </inertial>
+    <!-- Part base_link -->
+    <visual>
+      <origin xyz="0 0 0" rpy="-0 -0 -1.5708"/>
+      <geometry>
+        <mesh filename="package://robot_vacuum_description/assets/base_link.stl"/>
+      </geometry>
+      <material name="base_link_material">
+        <color rgba="0.501961 0.501961 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="-0 -0 -1.5708"/>
+      <geometry>
+        <mesh filename="package://robot_vacuum_description/assets/base_link.stl"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Link roof -->
+  <link name="roof_link">
+    <inertial>
+      <origin xyz="-2e-12 -0.00178866 -0.00507735" rpy="0 0 0"/>
+      <mass value="0.683273"/>
+      <inertia ixx="0.00350653" ixy="0" ixz="-0" iyy="0.00362483" iyz="-1.91394e-06" izz="0.00711728"/>
+    </inertial>
+    <!-- Part roof -->
+    <visual>
+      <origin xyz="-0 0 0" rpy="3.14159 -0 0"/>
+      <geometry>
+        <mesh filename="package://robot_vacuum_description/assets/roof.stl"/>
+      </geometry>
+      <material name="roof_link_material">
+        <color rgba="0.501961 0.501961 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0" rpy="3.14159 -0 0"/>
+      <geometry>
+        <mesh filename="package://robot_vacuum_description/assets/roof.stl"/>
+      </geometry>
+    </collision>
+  </link>
+
+   <!-- Joint from base_link to roof -->
+  <joint name="roof_joint" type="fixed">
+    <origin xyz="-0 0 0.0545" rpy="3.14159 0 1.5708"/>
+    <parent link="base_link"/>
+    <child link="roof_link"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" velocity="100"/>
+  </joint>
+
+  <!-- Link left_wheel_link -->
+  <link name="left_wheel_link">
+    <inertial>
+      <origin xyz="-0 -0 -0.0143302" rpy="0 0 0"/>
+      <mass value="0.072608"/>
+      <inertia ixx="2.16495e-05" ixy="0" ixz="-0" iyy="2.16495e-05" iyz="0" izz="3.29298e-05"/>
+    </inertial>
+    <!-- Part left_wheel_link -->
+    <visual>
+      <origin xyz="0 -0 -0.029" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://robot_vacuum_description/assets/wheel.stl"/>
+      </geometry>
+      <material name="left_wheel_material">
+        <color rgba="0.4 0.4 0.4 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 -0.029" rpy="-0 -0 0"/>
+      <geometry>
+        <mesh filename="package://robot_vacuum_description/assets/wheel.stl"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Joint from base_link to left_wheel -->
+  <joint name="left_wheel_joint" type="continuous">
+    <origin xyz="-0.015 0.075 0.0115" rpy="1.5708 -1.03727 0"/>
+    <parent link="base_link"/>
+    <child link="left_wheel_link"/>
+    <axis xyz="0 0 -1"/>
+    <limit effort="100" velocity="100"/>
+  </joint>
+
+  <!-- Link right_wheel_link -->
+  <link name="right_wheel_link">
+    <inertial>
+      <origin xyz="-0 -0 -0.0143302" rpy="0 0 0"/>
+      <mass value="0.072608"/>
+      <inertia ixx="2.16495e-05" ixy="0" ixz="-0" iyy="2.16495e-05" iyz="-0" izz="3.29298e-05"/>
+    </inertial>
+    <!-- Part right_wheel_link -->
+    <visual>
+      <origin xyz="-0 -0 -0.029" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://robot_vacuum_description/assets/wheel.stl"/>
+      </geometry>
+      <material name="right_wheel_material">
+        <color rgba="0.4 0.4 0.4 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0 -0.029" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://robot_vacuum_description/assets/wheel.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  
+  <!-- Joint from base_link to right_wheel -->
+  <joint name="right_wheel_joint" type="continuous">
+    <origin xyz="-0.015 -0.075 0.0115" rpy="1.5708 1.03727 -3.14159"/>
+    <parent link="base_link"/>
+    <child link="right_wheel_link"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" velocity="100"/>
+  </joint>
+
+  <!-- Link caster_frame -->
+  <link name="caster_frame_link">
+    <inertial>
+      <origin xyz="-0.00286518 -0 -0.0075839" rpy="0 0 0"/>
+      <mass value="0.0016661"/>
+      <inertia ixx="2.7546e-07" ixy="-0" ixz="-3.0744e-08" iyy="1.47808e-07" iyz="-0" izz="3.16241e-07"/>
+    </inertial>
+    <!-- Part caster_frame -->
+    <visual>
+      <origin xyz="0 -0 -0.002" rpy="-0 0 0"/>
+      <geometry>
+        <mesh filename="package://robot_vacuum_description/assets/caster_frame.stl"/>
+      </geometry>
+      <material name="caster_frame_link_material">
+        <color rgba="0.4 0.4 0.4 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 -0.002" rpy="-0 0 0"/>
+      <geometry>
+        <mesh filename="package://robot_vacuum_description/assets/caster_frame.stl"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Link caster_wheel -->
+  <link name="caster_wheel_link">
+    <inertial>
+      <origin xyz="0 -0 -0.0145998" rpy="0 0 0"/>
+      <mass value="0.0115684"/>
+      <inertia ixx="9.33961e-07" ixy="0" ixz="-0" iyy="9.33961e-07" iyz="-0" izz="1.06054e-06"/>
+    </inertial>
+    <!-- Part caster_wheel -->
+    <visual>
+      <origin xyz="0 0 -0.0021" rpy="1.5708 0 -0"/>
+      <geometry>
+        <mesh filename="package://robot_vacuum_description/assets/caster_wheel.stl"/>
+      </geometry>
+      <material name="caster_wheel_link_material">
+        <color rgba="0.4 0.4 0.4 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.0021" rpy="1.5708 0 -0"/>
+      <geometry>
+        <mesh filename="package://robot_vacuum_description/assets/caster_wheel.stl"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Joint from caster_frame to caster_wheel -->
+  <joint name="caster_wheel_joint" type="continuous">
+    <origin xyz="-0.009 0.0145 -0.0192" rpy="-1.5708 -0 -0"/>
+    <parent link="caster_frame_link"/>
+    <child link="caster_wheel_link"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" velocity="100"/>
+  </joint>
+
+  <!-- Joint from base_link to caster_frame -->
+  <joint name="caster_frame_joint" type="continuous">
+    <origin xyz="0.11 -0 0.014" rpy="0 -0 -3.14159"/>
+    <parent link="base_link"/>
+    <child link="caster_frame_link"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" velocity="100"/>
+  </joint>
+
+</robot>

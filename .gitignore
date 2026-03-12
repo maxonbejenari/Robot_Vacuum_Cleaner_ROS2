@@ -1,0 +1,13 @@
+# ROS 2 build files
+build/
+install/
+log/
+
+# Python virtual environments & cache
+robot_vacuum_env/
+__pycache__/
+*.pyc
+
+# yolo models
+*.pt
+.vscode/
