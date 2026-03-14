@@ -14,7 +14,7 @@ class YoloDetector(Node):
         # Load Yolo Model
         self.get_logger().info('Load yolo model...')
         self.model_general = YOLO("yolov8n.pt") # Load the general model (pre-trained on COCO dataset)
-        self.model_trained = YOLO("/home/w/runs/detect/train2/weights/best.pt") # Load the model trained on our custom dataset (change the path to your best.pt file)
+        self.model_trained = YOLO("/home/w/runs/detect/train5/weights/best.pt") # Load the model trained on our custom dataset (change the path to your best.pt file)
         self.get_logger().info('Model upload!')
 
         self.bridge = CvBridge()
