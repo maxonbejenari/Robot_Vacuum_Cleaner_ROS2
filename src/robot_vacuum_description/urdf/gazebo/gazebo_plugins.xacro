@@ -22,8 +22,8 @@
         <plugin filename="gz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher">
             <joint_name>left_wheel_joint</joint_name>
             <joint_name>right_wheel_joint</joint_name>
-            <joint_name>caster_frame_joint</joint_name>
-            <joint_name>caster_wheel_joint</joint_name>
+            <!-- <joint_name>caster_frame_joint</joint_name> -->
+            <!--<joint_name>caster_wheel_joint</joint_name> -->
         </plugin>
     </gazebo>
 

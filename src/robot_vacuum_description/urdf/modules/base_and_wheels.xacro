@@ -190,21 +190,17 @@
   </link>
 
   <!-- Joint from caster_frame to caster_wheel -->
-  <joint name="caster_wheel_joint" type="continuous">
-    <origin xyz="-0.009 0.0145 -0.0192" rpy="-1.5708 -0 -0"/>
+  <joint name="caster_wheel_joint" type="fixed">
+    <origin xyz="-0.009 0.0145 -0.0192" rpy="-1.5708 0 0"/>
     <parent link="caster_frame_link"/>
     <child link="caster_wheel_link"/>
-    <axis xyz="0 0 1"/>
-    <limit effort="100" velocity="100"/>
   </joint>
 
   <!-- Joint from base_link to caster_frame -->
-  <joint name="caster_frame_joint" type="continuous">
+  <joint name="caster_frame_joint" type="fixed">
     <origin xyz="0.11 -0 0.014" rpy="0 -0 -3.14159"/>
     <parent link="base_link"/>
     <child link="caster_frame_link"/>
-    <axis xyz="0 0 1"/>
-    <limit effort="100" velocity="100"/>
   </joint>
 
 </robot>
