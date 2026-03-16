@@ -11,9 +11,7 @@ Panels:
         - /TF1/Frames1
         - /TF1/Tree1
         - /Image1
-        - /Image1/Status1
         - /LaserScan1
-        - /LaserScan1/Status1
       Splitter Ratio: 0.5
     Tree Height: 542
   - Class: rviz_common/Selection
@@ -146,6 +144,10 @@ Visualization Manager:
           Value: false
         robot_vacuum/camera_link:
           Value: false
+        robot_vacuum/camera_optical_link:
+          Value: true
+        robot_vacuum/caster_frame_link:
+          Value: true
         robot_vacuum/caster_wheel_link:
           Value: false
         robot_vacuum/left_wheel_link:

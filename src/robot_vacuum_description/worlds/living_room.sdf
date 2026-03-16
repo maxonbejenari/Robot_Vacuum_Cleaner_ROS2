@@ -67,117 +67,62 @@
       <self_collide>false</self_collide>
     </model>
     <include>
-      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/makerspet/models/room_wall_2x5m/1</uri>
+      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/sebbyjp/models/room_wall_2x5m/1</uri>
       <name>room_wall_2x5m</name>
-      <pose>3.5052800178527832 -2.212019681930542 0 0 0 0</pose>
+      <pose>5.1675200462341309 -0.37360900640487671 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/makerspet/models/room_wall_2x5m/1</uri>
-      <name>room_wall_2x5m_0</name>
-      <pose>0.9730454683303833 -4.7020936012268066 0 0 0 -1.5915899334729255</pose>
-    </include>
-    <include>
-      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/makerspet/models/room_wall_2x5m/1</uri>
+      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/sebbyjp/models/room_wall_2x5m/1</uri>
       <name>room_wall_2x5m_1</name>
-      <pose>3.5083398818969727 2.7657186985015869 0 0 0 0</pose>
+      <pose>5.1705498695373535 4.6151018142700195 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/makerspet/models/room_wall_2x5m/1</uri>
+      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/sebbyjp/models/room_wall_2x5m/1</uri>
       <name>room_wall_2x5m_2</name>
-      <pose>-6.5396728515625 -2.1338798999786377 0 0 0 0</pose>
+      <pose>2.7314491271972656 7.1582727432250977 0 0 0 1.5786099510273848</pose>
     </include>
     <include>
-      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/makerspet/models/room_wall_2x5m/1</uri>
+      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/sebbyjp/models/room_wall_2x5m/1</uri>
       <name>room_wall_2x5m_3</name>
-      <pose>-6.533750057220459 2.8564445972442627 0 0 0 0</pose>
+      <pose>-2.2953586578369141 7.1728391647338867 0 0 0 1.5820699938687672</pose>
     </include>
     <include>
-      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/makerspet/models/room_wall_2x5m/1</uri>
+      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/sebbyjp/models/room_wall_2x5m/1</uri>
       <name>room_wall_2x5m_4</name>
-      <pose>1.0706419944763184 5.3749866485595703 0 0 0 1.553209990343497</pose>
+      <pose>-4.8483786582946777 4.9183502197265625 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/makerspet/models/room_wall_2x5m/1</uri>
+      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/sebbyjp/models/room_wall_2x5m/1</uri>
       <name>room_wall_2x5m_5</name>
-      <pose>-3.9859588146209717 -4.6155343055725098 0 0 0 -1.5823800316212753</pose>
+      <pose>-4.8469300270080566 -0.090106353163719177 0 0 0 0</pose>
     </include>
     <include>
-      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/makerspet/models/room_wall_2x5m/1</uri>
+      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/sebbyjp/models/room_wall_2x5m/1</uri>
       <name>room_wall_2x5m_6</name>
-      <pose>-3.998687744140625 5.4420995712280273 0 0 0 1.5523600223677188</pose>
+      <pose>2.7114698886871338 -2.8776700496673584 0 0 0 -1.5970899741889037</pose>
     </include>
     <include>
-      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/openrobotics/models/bedsidetablecart/3</uri>
-      <name>BedsideTableCart</name>
-      <pose>-3.0872554818436728 -4.2202493348919274 -9.7207030868695288e-05 5.1920898615896186e-07 -2.4518879115892e-07 -3.3943585957918359e-11</pose>
-    </include>
-    <include>
-      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/openrobotics/models/dining table/1</uri>
-      <name>DiningTable</name>
-      <pose>-4.1685299873352051 2.3185698986053467 0 0 0 0</pose>
-    </include>
-    <include>
-      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/openrobotics/models/dining chair/1</uri>
-      <name>DiningChair</name>
-      <pose>-4.1373763944883528 3.5463232052424916 0 0 0 0</pose>
-    </include>
-    <include>
-      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/openrobotics/models/dining chair/1</uri>
-      <name>DiningChair_0</name>
-      <pose>-3.8035900592803955 2.7834999561309814 0 0 0 -1.563590042925431</pose>
-    </include>
-    <include>
-      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/openrobotics/models/dining chair/1</uri>
-      <name>DiningChair_1</name>
-      <pose>-3.8159918785095215 1.7770147323608398 0 0 0 -1.5713999539258308</pose>
-    </include>
-    <include>
-      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/openrobotics/models/dining chair/1</uri>
-      <name>DiningChair_2</name>
-      <pose>-4.1709685325622559 1.2101078033447266 0 0 0 -3.1210199985939471</pose>
-    </include>
-    <include>
-      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/openrobotics/models/dining chair/1</uri>
-      <name>DiningChair_3</name>
-      <pose>-4.575592041015625 2.9696395397186279 0 0 0 1.6161100041608787</pose>
-    </include>
-    <include>
-      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/openrobotics/models/dining chair/1</uri>
-      <name>DiningChair_4</name>
-      <pose>-4.5432825088500977 1.8368501663208008 0 0 0 1.6042000161465479</pose>
-    </include>
-    <include>
-      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/makerspet/models/room_wall_2x5m/1</uri>
+      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/sebbyjp/models/room_wall_2x5m/1</uri>
       <name>room_wall_2x5m_7</name>
-      <pose>-1.4875134647497426 2.841670320845596 0 0 0 0</pose>
+      <pose>-2.3161725997924805 -2.7575562000274658 0 0 0 1.5424700017041977</pose>
+    </include>
+    <include>
+      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/sebbyjp/models/room_wall_2x5m/1</uri>
+      <name>room_wall_2x5m_9</name>
+      <pose>-0.98256214348391879 4.6204802804574321 0 0 0 0</pose>
     </include>
     <include>
       <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/openrobotics/models/bed/1</uri>
       <name>Bed</name>
-      <pose>2.1634776592254639 4.3449001312255859 0 0 0 -1.5975699852558296</pose>
+      <pose>3.9118466377258301 6.1427197456359863 0 0 0 -1.5767999859224717</pose>
     </include>
     <include>
       <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/openrobotics/models/bedsidetablecart/3</uri>
-      <name>BedsideTableCart_0</name>
-      <pose>3.0069727823437225 2.9597017314267471 -9.7230266000786138e-05 6.0849334814511822e-07 -2.9750823566159999e-07 3.0992541361700039</pose>
-    </include>
-    <include>
-      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/openrobotics/models/office chair/1</uri>
-      <name>OfficeChair</name>
-      <pose>1.9951856136322021 -2.997429370880127 0 0 0 3.1363100000194222</pose>
-    </include>
-    <include>
-      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/openrobotics/models/office desk/1</uri>
-      <name>Desk</name>
-      <pose>2.0203957557678223 -3.8287661075592041 0 0 0 -1.5906000200785402</pose>
-    </include>
-    <include>
-      <uri>file://<urdf-string></uri>
-      <name>robot_vacuum</name>
-      <pose>8.394159607989097e-06 -7.4823585255394115e-07 0.00016948526315389511 1.799091309042179e-05 -0.004902241422318974 -5.0984658867104001e-05</pose>
+      <name>BedsideTableCart</name>
+      <pose>4.4800438035467254 4.5110899639284403 -9.7205796826224173e-05 5.1412124292355915e-07 -2.4430989213698071e-07 -3.3942810069248467e-11</pose>
     </include>
     <model name='box'>
-      <pose>2.750035567191687 0.17580879330226129 0.49999999990199806 6.2287739151293738e-22 9.3279666454713669e-22 -3.6315533669320137e-22</pose>
+      <pose>4.1549608462318872 -0.03249098569322717 0.49999999970892495 1.9456243348768095e-21 -2.0287702973480091e-21 -7.5527752180039009e-22</pose>
       <link name='box_link'>
         <inertial>
           <inertia>
@@ -223,6 +168,36 @@
       <static>false</static>
       <self_collide>false</self_collide>
     </model>
+    <include>
+      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/openrobotics/models/walking person/3</uri>
+      <name>person_walking</name>
+      <pose>-3.5267899036407471 -0.54745733737945557 -2.1546845055051041e-10 -1.5709366610395374e-21 9.2598601699162699e-21 -4.5137666631509314e-22</pose>
+    </include>
+    <include>
+      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/openrobotics/models/dining table/1</uri>
+      <name>DiningTable</name>
+      <pose>-2.7854967287715833 4.5811931698118773 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/openrobotics/models/dining chair/1</uri>
+      <name>DiningChair</name>
+      <pose>-2.7330827333565648 5.8971978554128563 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/openrobotics/models/dining chair/1</uri>
+      <name>DiningChair_0</name>
+      <pose>-3.7259700298309326 4.8344998359680176 0 0 0 1.6167455754377813</pose>
+    </include>
+    <include>
+      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/openrobotics/models/dining chair/1</uri>
+      <name>DiningChair_1</name>
+      <pose>-2.0267701148986816 4.6412501335144043 0 0 0 -1.5467616763448595</pose>
+    </include>
+    <include>
+      <uri>file:///home/w/.gz/fuel/fuel.gazebosim.org/openrobotics/models/dining chair/1</uri>
+      <name>DiningChair_2</name>
+      <pose>-2.7680699825286865 2.9739899635314941 0 0 0 -3.1186710792496593</pose>
+    </include>
     <light name='sun' type='directional'>
       <pose>0 0 10 0 0 0</pose>
       <cast_shadows>true</cast_shadows>
