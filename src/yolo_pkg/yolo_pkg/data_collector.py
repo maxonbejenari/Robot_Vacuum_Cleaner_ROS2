@@ -10,7 +10,7 @@ class DataCollectorNode(Node):
         super().__init__('data_collector_node')
         
         self.camera_topic = '/camera/image_raw' # Topic wich we will listen to
-        self.save_directory = os.path.expanduser('~/dataset_multiclass/images') # Directory where we will save the images
+        self.save_directory = os.path.expanduser('~/dataset_gazebo/images') # Directory where we will save the images
         self.save_interval = 5.0 # Save an image every 5 seconds
         self.image_counter = 0 # Counter for naming the images
         
