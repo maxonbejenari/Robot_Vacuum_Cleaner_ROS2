@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<!-- Generated using onshape-to-robot -->
+<!-- Onshape document_id: 6ec665232e6fc828980877e8 -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  
+    <!-- Link lidar -->
+  <link name="lidar_link">
+    <inertial>
+      <origin xyz="-0 0 -0.005" rpy="0 0 0"/>
+      <mass value="0.0258852"/>
+      <inertia ixx="5.80638e-06" ixy="0" ixz="0" iyy="5.80638e-06" iyz="-0" izz="1.12633e-05"/>
+    </inertial>
+    <!-- Part lidar -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.03" length="0.01" />
+      </geometry>
+      <material name="lidar_link_material">
+        <color rgba="0.2 0.2 0.2 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.03" length="0.015" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Joint from roof to lidar -->
+  <joint name="lidar_joint" type="fixed">
+    <origin xyz="0 0.029 -0.022" rpy="0 3.14 4.71"/>
+    <parent link="roof_link"/>
+    <child link="lidar_link"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" velocity="100"/>
+  </joint>
+
+</robot>

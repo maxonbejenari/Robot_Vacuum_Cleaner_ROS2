@@ -1,0 +1,35 @@
+{
+  "documentId": "6ec665232e6fc828980877e8",
+  "outputFormat": "urdf",
+  "packageName": "robot_description",
+  "robotName": "robot_vacuum",
+  "assemblyName": "Robot_Vacuum",
+  "export_stl_with_meters": true,
+  "set_zero_mass_to_fixed": false,
+  "default_joint_type": "continuous",
+  "mesh_output_format": "stl",
+  "joint_properties": {
+      "default": {
+          "max_effort": 100,
+          "max_velocity": 100
+      },
+      "dof_roof": { 
+          "type": "fixed"
+      },
+      "dof_lidar": { 
+          "type": "fixed"
+      },
+      "dof_camera": { 
+          "type": "fixed"
+      },
+      "dof_right_wheel": { 
+          "type": "revolute"
+      },
+      "dof_left_wheel": { 
+          "type": "revolute"
+      },
+      "dof_caster_wheel": { 
+          "type": "revolute"
+      }
+  }
+}
