@@ -3,10 +3,10 @@
 <!-- Onshape document_id: 6ec665232e6fc828980877e8 -->
 <robot name="robot_vacuum" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <link name="base_footprint_link"/>
+  <link name="base_footprint"/>
 
   <joint name="base_joint" type="fixed">
-    <parent link="base_footprint_link" />
+    <parent link="base_footprint" />
     <child link="base_link" />
     <origin xyz="0 0 0.025" rpy="0 0 0" />
   </joint>

@@ -11,8 +11,9 @@
             <right_joint>right_wheel_joint</right_joint>
             <wheel_separation>0.186</wheel_separation>
             <wheel_radius>0.0375</wheel_radius>
-            <frame_id>${robot_name}/odom</frame_id> <!--Best to use prefixes and to set the prefix on the RVIZ config too, see xacro_properties.xacro for where to change these -->
-            <child_frame_id>${robot_name}/base_footprint</child_frame_id>  <!--Best to use prefixes and to set the prefix on the RVIZ config too, see xacro_properties.xacro for where to change these -->
+            <frame_id>${robot_name}/odom</frame_id> 
+            <child_frame_id>${robot_name}/base_footprint</child_frame_id> 
+            <tf_topic>/model/${robot_name}/tf</tf_topic>
         </plugin>
     </gazebo>
 
