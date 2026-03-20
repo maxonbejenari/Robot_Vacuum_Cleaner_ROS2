@@ -41,7 +41,7 @@
         <sensor name='gpu_lidar' type='gpu_lidar'>
             <pose relative_to='lidar_link'>0 0 0 0 0 0</pose>
             <topic>scan</topic>
-            <update_rate>2</update_rate>
+            <update_rate>10</update_rate>
             <always_on>1</always_on>
             <visualize>1</visualize>
             <lidar>
@@ -49,8 +49,8 @@
                     <horizontal>
                         <samples>640</samples>
                         <resolution>1</resolution>
-                        <min_angle>-1.396263</min_angle>
-                        <max_angle>1.396263</max_angle>
+                        <min_angle>-3.14</min_angle>
+                        <max_angle>3.14</max_angle>
                     </horizontal>
                     <!--<vertical> Not needed if not scanning vertically
                         <samples>1</samples>

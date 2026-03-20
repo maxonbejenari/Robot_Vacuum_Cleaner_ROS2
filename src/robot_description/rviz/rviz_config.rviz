@@ -10,9 +10,7 @@ Panels:
         - /TF1
         - /TF1/Frames1
         - /Image1
-        - /Image1/Status1
         - /LaserScan1
-        - /LaserScan1/Status1
       Splitter Ratio: 0.5
     Tree Height: 348
   - Class: rviz_common/Selection
@@ -32,7 +30,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: LaserScan
+    SyncSource: ""
 Visualization Manager:
   Class: ""
   Displays:
@@ -130,39 +128,30 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        map:
-          Value: true
         robot_vacuum/base_footprint:
           Value: false
-        robot_vacuum/base_footprint/gpu_lidar:
-          Value: true
         robot_vacuum/base_link:
-          Value: false
+          Value: true
         robot_vacuum/camera_link:
-          Value: false
+          Value: true
         robot_vacuum/camera_optical_link:
-          Value: false
+          Value: true
         robot_vacuum/caster_wheel_link:
-          Value: false
+          Value: true
         robot_vacuum/left_wheel_link:
-          Value: false
+          Value: true
         robot_vacuum/lidar_link:
           Value: false
-        robot_vacuum/odom:
-          Value: true
         robot_vacuum/right_wheel_link:
-          Value: false
+          Value: true
         robot_vacuum/roof_link:
-          Value: false
+          Value: true
       Marker Scale: 1
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: false
       Tree:
-        map:
-          robot_vacuum/odom:
-            {}
         robot_vacuum/base_footprint:
           robot_vacuum/base_link:
             robot_vacuum/camera_link:
@@ -176,8 +165,7 @@ Visualization Manager:
               {}
             robot_vacuum/roof_link:
               robot_vacuum/lidar_link:
-                robot_vacuum/base_footprint/gpu_lidar:
-                  {}
+                {}
       Update Interval: 0
       Value: true
     - Class: rviz_default_plugins/Image
@@ -274,7 +262,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 1.7833021879196167
+      Distance: 1.2152705192565918
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -289,10 +277,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.3753986656665802
+      Pitch: 0.3603988289833069
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.2022478580474854
+      Yaw: 4.662248611450195
     Saved: ~
 Window Geometry:
   Displays:

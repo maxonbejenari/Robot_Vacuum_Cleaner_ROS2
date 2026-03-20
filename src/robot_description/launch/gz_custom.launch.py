@@ -42,11 +42,7 @@ def generate_launch_description():
 
     use_sim_time = LaunchConfiguration('use_sim_time')
 
-
-
-
 # ========================================================= #
-
 
 # ======================== RVIZ ========================== #
 
@@ -84,7 +80,7 @@ def generate_launch_description():
         parameters=[{
             'robot_description': robot_description_content,
             'use_sim_time': use_sim_time,
-            'frame_prefix': robot_name + '/' 
+            'frame_prefix': robot_name + '/'
         }]
     )
 
@@ -135,7 +131,7 @@ def generate_launch_description():
             '-topic', 'robot_description', # Read URDF from /robot_description topic
             '-x', '0', # Default spawn location
             '-y', '0',
-            '-z', '0.5'
+            '-z', '0.05'
         ],
         output='screen'
     )
@@ -169,17 +165,19 @@ def generate_launch_description():
                f'{robot_name}/lidar_link', # Parent: This should be the NEWLY prefixed lidar_link (e.g., camlidarbot/lidar_link)
                f'{robot_name}/base_footprint/gpu_lidar'] # Child: This is your actual LaserScan frame_id
     )
-
-    # New Node: Static Transform Publisher for map to odom
-    # This places your robot's 'odom' frame at the origin of the 'map' frame.
+    
     map_odom_publisher_node = Node(
-        package='tf2_ros',
-        executable='static_transform_publisher',
-        name='map_odom_broadcaster',
-        output='screen',
-        # arguments: x y z qx qy qz qw parent_frame_id child_frame_id
-        arguments=['0', '0', '0', '0', '0', '0', '1', 'map', f'{robot_name}/odom']
-    )
+    package='tf2_ros',
+    executable='static_transform_publisher',
+    name='map_odom_broadcaster',
+    output='screen',
+    arguments=[
+        '0', '0', '0',
+        '0', '0', '0', '1',
+        'map',
+        f'{robot_name}/odom'
+    ]
+)
 
 
 # ========================================================= #
