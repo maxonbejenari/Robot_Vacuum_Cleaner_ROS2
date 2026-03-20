@@ -11,6 +11,8 @@ Panels:
         - /TF1/Frames1
         - /Image1
         - /LaserScan1
+        - /Map1
+        - /Map1/Status1
       Splitter Ratio: 0.5
     Tree Height: 348
   - Class: rviz_common/Selection
@@ -30,7 +32,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: LaserScan
 Visualization Manager:
   Class: ""
   Displays:
@@ -128,8 +130,12 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
+        map:
+          Value: true
         robot_vacuum/base_footprint:
           Value: false
+        robot_vacuum/base_footprint/gpu_lidar:
+          Value: true
         robot_vacuum/base_link:
           Value: true
         robot_vacuum/camera_link:
@@ -142,6 +148,8 @@ Visualization Manager:
           Value: true
         robot_vacuum/lidar_link:
           Value: false
+        robot_vacuum/odom:
+          Value: true
         robot_vacuum/right_wheel_link:
           Value: true
         robot_vacuum/roof_link:
@@ -152,6 +160,9 @@ Visualization Manager:
       Show Axes: true
       Show Names: false
       Tree:
+        map:
+          robot_vacuum/odom:
+            {}
         robot_vacuum/base_footprint:
           robot_vacuum/base_link:
             robot_vacuum/camera_link:
@@ -165,7 +176,8 @@ Visualization Manager:
               {}
             robot_vacuum/roof_link:
               robot_vacuum/lidar_link:
-                {}
+                robot_vacuum/base_footprint/gpu_lidar:
+                  {}
       Update Interval: 0
       Value: true
     - Class: rviz_default_plugins/Image
@@ -216,10 +228,33 @@ Visualization Manager:
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
+    - Alpha: 0.699999988079071
+      Binary representation: false
+      Binary threshold: 100
+      Class: rviz_default_plugins/Map
+      Color Scheme: map
+      Draw Behind: false
+      Enabled: true
+      Name: Map
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /map
+      Update Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /map_updates
+      Use Timestamp: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: robot_vacuum/base_footprint
+    Fixed Frame: map
     Frame Rate: 30
   Name: root
   Tools:
@@ -262,7 +297,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 1.2152705192565918
+      Distance: 3.008965253829956
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -277,10 +312,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.3603988289833069
+      Pitch: 0.8203983902931213
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.662248611450195
+      Yaw: 3.2622389793395996
     Saved: ~
 Window Geometry:
   Displays:

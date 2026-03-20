@@ -15,8 +15,8 @@ setup(
     zip_safe=True,
     maintainer='w',
     maintainer_email='rurugturu@gmail.com',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    description='Detection ros pkg',
+    license='Apache-2.0',
     extras_require={
         'test': [
             'pytest',
