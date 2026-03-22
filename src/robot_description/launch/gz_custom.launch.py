@@ -156,15 +156,19 @@ def generate_launch_description():
     #THESE ARE SPECIFIC TO GETTING THE LIDAR WORKING:
     
     #publishes a static transform for the purpose of getting lidar data across to RVIZ
-    lidar_tf_publisher_node = Node(   
+    lidar_tf_publisher_node = Node(
     package='tf2_ros',
     executable='static_transform_publisher',
     name='lidar_gpu_frame_broadcaster',
     output='screen',
-    arguments=['0', '0', '0', '0', '0', '0', '1', # x,y,z, qx,qy,qz,qw (identity quaternion)
-               f'{robot_name}/lidar_link', # Parent: This should be the NEWLY prefixed lidar_link (e.g., camlidarbot/lidar_link)
-               f'{robot_name}/base_footprint/gpu_lidar'] # Child: This is your actual LaserScan frame_id
-    )
+    arguments=[
+        '--x', '0', '--y', '0', '--z', '0',
+        '--qx', '0', '--qy', '0', '--qz', '0', '--qw', '1',
+        '--frame-id', f'{robot_name}/lidar_link',
+        '--child-frame-id', f'{robot_name}/base_footprint/gpu_lidar'
+    ],
+    parameters=[{'use_sim_time': True}]
+    )   
     
     map_odom_publisher_node = Node(
     package='tf2_ros',
@@ -172,12 +176,13 @@ def generate_launch_description():
     name='map_odom_broadcaster',
     output='screen',
     arguments=[
-        '0', '0', '0',
-        '0', '0', '0', '1',
-        'map',
-        f'{robot_name}/odom'
-    ]
-)
+        '--x', '0', '--y', '0', '--z', '0',
+        '--qx', '0', '--qy', '0', '--qz', '0', '--qw', '1',
+        '--frame-id', 'map',
+        '--child-frame-id', f'{robot_name}/odom'
+    ],
+    parameters=[{'use_sim_time': True}]
+    )
 
 
 # ========================================================= #
