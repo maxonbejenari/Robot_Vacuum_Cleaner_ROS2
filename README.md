@@ -107,7 +107,7 @@ robot_vacuum_ws/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/robot_vacuum_cleaner.git
+git clone https://github.com/maxonbejenari/Robot_Vacuum_Cleaner_ROS2.git
 cd robot_vacuum_ws
 
 # Install ROS2 dependencies
