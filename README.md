@@ -30,12 +30,14 @@ The goal is to simulate the full software stack of a commercial robot vacuum cle
 
 ## Demo
 
->  SLAM mapping the room in real time
+>  CAD 
+<img width="1489" height="826" alt="Screenshot from 2026-03-18 12-21-58" src="https://github.com/user-attachments/assets/dffcb72b-6951-4257-ac41-018781ea38ec" />
 
 >  Autonomous navigation with NAV2
+<img width="1811" height="998" alt="Screenshot from 2026-03-23 12-13-38" src="https://github.com/user-attachments/assets/759cab73-a23a-4b57-ab53-6a2d8f5b17be" />
 
 >  YOLO object detection on camera feed
-
+<img width="1811" height="937" alt="Screenshot from 2026-03-23 12-14-26" src="https://github.com/user-attachments/assets/81bd03b5-fde4-45f7-a133-3b770ddd0049" />
 
 ## Tech Stack
 
