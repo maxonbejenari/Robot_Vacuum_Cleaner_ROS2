@@ -106,9 +106,12 @@ robot_vacuum_ws/
 ### Installation
 
 ```bash
+# Create ros2 workspace
+mkdir robot_vacuum_ws
+
 # Clone the repository
-git clone https://github.com/maxonbejenari/Robot_Vacuum_Cleaner_ROS2.git
 cd robot_vacuum_ws
+git clone https://github.com/maxonbejenari/Robot_Vacuum_Cleaner_ROS2.git
 
 # Install ROS2 dependencies
 sudo apt update
