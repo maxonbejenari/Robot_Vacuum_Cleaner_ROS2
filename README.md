@@ -8,14 +8,11 @@ A fully simulated autonomous vacuum cleaner robot built with ROS2 Jazzy and Gaze
 
 - [Overview](#overview)
 - [Demo](#demo)
-- [System Architecture](#system-architecture)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [YOLO Object Detection](#yolo-object-detection)
-- [NAV2 Navigation](#nav2-navigation)
-- [Roadmap](#roadmap)
 
 ---
 
