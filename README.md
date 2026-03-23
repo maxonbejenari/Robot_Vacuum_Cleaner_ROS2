@@ -190,11 +190,7 @@ ros2 run yolo_pkg data_collector
 # Train YOLOv8 on collected data
 yolo train data=dataset.yaml model=yolov8n.pt epochs=50 imgsz=640
 ```
-## License
 
-MIT License — see [LICENSE](LICENSE) for details.
-
----
 
 ## Author
 
